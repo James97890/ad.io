@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gifts for you</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Gaegu:wght@700&family=Cormorant+Garamond:wght@500;600&family=Playfair+Display:wght@500;700&family=Montserrat:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- 1. GIFTS -->
+<section class="scene active" id="gifts">
+  <h1 class="title big">Gifts for you</h1>
+  <div class="gifts">
+    <button class="gift" data-go="message"><span>💌</span>Message</button>
+    <button class="gift" data-go="memories"><span>🧸</span>Memories</button>
+    <button class="gift" data-go="flowers"><span>💐</span>Flowers</button>
+  </div>
+</section>
+
+<!-- 2. MESSAGE -->
+<section class="scene" id="message">
+  <div class="polas">
+    <span class="balloon l">🎈</span>
+    <div class="ph pola r1"><img src="img/p1.jpg" alt="" onerror="this.remove()"></div>
+    <div class="ph pola r2"><img src="img/p2.jpg" alt="" onerror="this.remove()"></div>
+    <span class="balloon r">🎈</span>
+  </div>
+  <div class="letter">
+    <p class="hello">Happy Anniversary, my love. 💜</p>
+    <p>Today marks another beautiful chapter of our journey together, and I honestly can't put into words how grateful I am to have you in my life. Through every smile, every laugh, every challenge, and every moment we've shared, you've become one of the most important parts of my world.</p>
+    <p>You are my comfort, my safe place, my best friend, and the person who makes ordinary days feel extraordinary. Whenever life gets overwhelming, you're the person I want to run to. Your presence alone brings me peace, and your love gives me strength in ways you may never fully realize.</p>
+    <p>I love the little things about you—the way you make me smile without even trying, the way you listen to me, the way you care, and the way you make me feel loved even from miles away. Every memory we've created together is something I treasure deeply, and I can't wait to make even more with you.</p>
+    <p>No matter what challenges come our way, I hope we continue to choose each other, continue to communicate, continue to grow, and continue to love one another with the same sincerity that brought us together. I know the future won't always be easy, but having you by my side makes me believe that we can overcome anything.</p>
+    <p>Thank you for being my person, my favorite hello, and my hardest goodbye. Thank you for filling my life with love, happiness, and countless beautiful memories. I am so lucky to call you mine.</p>
+    <p>Happy Anniversary, baby. Here's to all the memories we've made, all the lessons we've learned, and all the beautiful moments still waiting for us in the future. I love you more than words can ever explain, and I will continue choosing you today, tomorrow, and every day after that. 💗</p>
+  </div>
+  <a class="link" data-go="gifts">Back</a>
+</section>
+
+<!-- 3. MEMORIES (text) -->
+<section class="scene" id="memories">
+  <h2 class="title">Memories Made With You</h2>
+  <div class="wrap">
+    <div class="strip">
+      <div class="ph"><img src="img/s1.jpg" alt="" onerror="this.remove()"></div>
+      <div class="ph"><img src="img/s2.jpg" alt="" onerror="this.remove()"></div>
+      <div class="ph"><img src="img/s3.jpg" alt="" onerror="this.remove()"></div>
+      <div class="ph"><img src="img/s4.jpg" alt="" onerror="this.remove()"></div>
+    </div>
+    <div class="card serif"><p id="mtext"></p></div>
+    <span class="deco tr">🌺</span><span class="deco bl">🥀</span>
+  </div>
+  <a class="link after" data-go="gallery">Next</a>
+</section>
+
+<!-- 3b. GALLERY -->
+<section class="scene" id="gallery">
+  <div class="bgphoto"><img src="img/bg.jpg" alt="" onerror="this.remove()"></div>
+  <svg class="path" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M22 72 C 28 20, 55 25, 52 70 S 60 20, 70 40" fill="none" stroke="#fff" stroke-width=".35" stroke-dasharray="1.6 1.2" vector-effect="non-scaling-stroke"/></svg>
+  <div class="ph fl" style="--l:14%;--t:18%;--r:-6deg"><img src="img/g1.jpg" alt="" onerror="this.remove()"></div>
+  <div class="ph fl" style="--l:42%;--t:22%;--r:6deg;--w:150px;--h:150px"><img src="img/g2.jpg" alt="" onerror="this.remove()"></div>
+  <div class="ph fl" style="--l:auto;--ri:8%;--t:12%;--r:5deg"><img src="img/g3.jpg" alt="" onerror="this.remove()"></div>
+  <div class="ph fl" style="--l:6%;--t:auto;--b:14%;--r:-8deg"><img src="img/g4.jpg" alt="" onerror="this.remove()"></div>
+  <div class="ph fl" style="--l:50%;--t:auto;--b:10%;--r:-4deg"><img src="img/g5.jpg" alt="" onerror="this.remove()"></div>
+  <div class="ph fl" style="--l:auto;--ri:7%;--t:auto;--b:16%;--r:7deg"><img src="img/g6.jpg" alt="" onerror="this.remove()"></div>
+  <a class="link low" data-go="gifts">Back</a>
+</section>
+
+<!-- 4. FLOWERS -->
+<section class="scene" id="flowers">
+  <div class="wrap gingham">
+    <div class="card hand"><p id="ftext"></p></div>
+    <span class="deco tr">⭐</span>
+    <span class="bouquet">💐</span>
+    <button class="vinyl" data-go="song" aria-label="Click here"><i>Click Here</i></button>
+  </div>
+</section>
+
+<!-- 5. SONG -->
+<section class="scene" id="song">
+  <h2 class="title">Song for you</h2>
+  <div class="video">
+    <iframe id="yt" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <span class="ribbon">🎀</span>
+    <div class="ph stamp s1"><img src="img/t1.jpg" alt="" onerror="this.remove()"></div>
+    <div class="ph stamp s2"><img src="img/t2.jpg" alt="" onerror="this.remove()"></div>
+    <span class="deco bl">🌺</span>
+  </div>
+  <a class="link" data-go="final">Next</a>
+</section>
+
+<!-- 6. FINAL -->
+<section class="scene" id="final">
+  <div class="bgphoto dim"><img src="img/bg.jpg" alt="" onerror="this.remove()"></div>
+  <h1 class="happy">HAPPY ANNIVERSARY</h1>
+  <p class="love title">love of my life</p>
+  <a class="link low" data-go="gifts">Back to gifts</a>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

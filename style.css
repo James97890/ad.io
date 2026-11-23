@@ -1,0 +1,92 @@
+:root{--red:#6b0006;--wine:#5a0a12}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;min-height:100dvh;background:var(--red);color:#fff;font-family:'Gaegu',cursive;overflow:hidden;-webkit-text-size-adjust:100%}
+.scene{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;padding:28px 16px calc(40px + env(safe-area-inset-bottom));overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;opacity:0;filter:blur(10px);pointer-events:none;transition:opacity .9s,filter .9s}
+.scene.active{opacity:1;filter:none;pointer-events:auto}
+.title{font-family:'Kaushan Script',cursive;font-weight:400;font-size:2.4rem;text-align:center;margin:8px 0 18px;text-shadow:0 2px 8px #0005;z-index:2}
+.title.big{font-size:3.2rem;margin-top:9vh}
+.link{font-family:'Montserrat',sans-serif;font-size:1.2rem;text-decoration:underline;cursor:pointer;margin-top:22px;padding:8px 14px;color:#fff;z-index:3;flex-shrink:0}
+.link.low{margin-top:auto;padding-top:24px}
+.after{opacity:0;transition:opacity 1s}.after.show{opacity:1}
+
+/* gifts */
+.gifts{display:flex;gap:6vw;margin-top:9vh;flex-wrap:wrap;justify-content:center}
+.gift{background:none;border:0;color:#fff;font:600 1.3rem 'Cormorant Garamond',serif;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:10px}
+.gift span{font-size:5.5rem;filter:drop-shadow(0 6px 10px #0006);transition:transform .3s}
+.gift:hover span{transform:translateY(-8px) scale(1.08) rotate(-4deg)}
+
+/* photos */
+.ph{background:linear-gradient(135deg,#d98a96,#8c2a3a);overflow:hidden}
+.ph img{width:100%;height:100%;object-fit:cover;display:block}
+
+/* message */
+.polas{position:relative;width:min(340px,100%);height:200px;flex:none}
+.pola{position:absolute;background:#f4f0ea;padding:8px 8px 34px;width:min(150px,42vw);height:170px;box-shadow:0 12px 20px #0006}
+.pola img{height:100%}
+.r1{left:12px;top:0;transform:rotate(-8deg)}
+.r2{right:12px;top:14px;transform:rotate(7deg)}
+.balloon{position:absolute;font-size:3rem;top:30px;z-index:2}.balloon.l{left:0}.balloon.r{right:0;top:0}
+.letter{max-width:660px;width:100%;text-align:center;font-size:1.35rem;line-height:1.4;margin-top:10px}
+.letter p{margin-bottom:1.1em;overflow-wrap:break-word}.hello{font-family:'Kaushan Script';font-size:1.25rem}
+
+/* cards */
+.wrap{position:relative;width:min(780px,100%);margin:10px auto 0}
+.card{background:#fff;color:var(--wine);padding:44px 36px;min-height:280px;display:flex;align-items:center;text-align:center;margin-left:70px;box-shadow:0 14px 30px #0006}
+.card p{white-space:pre-line;width:100%;line-height:1.4;overflow-wrap:break-word}
+.serif{font:600 1.25rem/1.4 'Cormorant Garamond',serif}
+.hand{font:700 1.2rem 'Gaegu',cursive}
+.strip{position:absolute;left:0;top:-14px;width:84px;background:#7a0a14;padding:6px;display:flex;flex-direction:column;gap:6px;transform:rotate(-2deg);z-index:2;box-shadow:0 8px 14px #0005}
+.strip .ph{height:78px}
+.deco{position:absolute;font-size:3.5rem;z-index:3;filter:drop-shadow(0 4px 6px #0006);pointer-events:none}
+.tr{top:-24px;right:4px}.bl{bottom:-24px;left:12px}
+
+/* gallery */
+.bgphoto{position:fixed;inset:0;background:linear-gradient(#5a0a12,#3b0409);z-index:0;pointer-events:none}
+.bgphoto img{width:100%;height:100%;object-fit:cover;filter:brightness(.45) saturate(1.2) blur(2px)}
+.bgphoto.dim img{filter:brightness(.55) sepia(.3)}
+.path{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
+.fl{position:absolute;left:var(--l,auto);right:var(--ri,auto);top:var(--t,auto);bottom:var(--b,auto);width:var(--w,120px);height:var(--h,120px);border:3px solid #d63a46;transform:rotate(var(--r,0deg));box-shadow:0 8px 16px #0006;animation:float 5s ease-in-out infinite;z-index:2}
+@keyframes float{50%{transform:rotate(var(--r,0deg)) translateY(-10px)}}
+
+/* flowers */
+.gingham::before{content:"";position:absolute;left:0;top:-14px;width:min(520px,75%);height:80px;
+background:repeating-linear-gradient(0deg,#e9dcc2 0 5px,#8b1420 5px 10px),repeating-linear-gradient(90deg,#8b1420 0 5px,#e9dcc2 5px 10px);background-blend-mode:multiply}
+.gingham .card{position:relative;margin-top:26px}
+.bouquet{position:absolute;left:4px;bottom:-28px;font-size:5rem;z-index:3;filter:drop-shadow(0 6px 8px #0006);pointer-events:none}
+.vinyl{position:absolute;right:6px;bottom:-30px;width:112px;height:112px;border-radius:50%;border:6px solid #8b1420;cursor:pointer;z-index:3;
+background:radial-gradient(circle,#c9202c 0 10%,#111 11% 40%,#222 41% 43%,#0b0b0b 44%);animation:spin 8s linear infinite}
+.vinyl i{font:italic 1.15rem 'Kaushan Script';color:#fff;display:block;transform:rotate(-24deg)}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* song */
+.video{position:relative;width:min(640px,92vw);aspect-ratio:16/9;background:#8b0f1a;padding:14px;box-shadow:0 0 40px #b0192866;margin:10px 0 36px}
+.video iframe{width:100%;height:100%;border:0;background:#000}
+.ribbon{position:absolute;right:12px;top:-26px;font-size:2.8rem;z-index:3;pointer-events:none}
+.stamp{position:absolute;width:104px;height:122px;border:6px solid #fff;outline:3px dotted #fff;outline-offset:2px;box-shadow:0 8px 16px #0006;z-index:2}
+.s1{right:8px;top:-18px;transform:rotate(7deg)}.s2{right:12px;bottom:-34px;transform:rotate(-6deg)}
+
+/* final */
+.happy{position:relative;z-index:2;margin-top:32vh;font:500 clamp(2rem,8vw,4.4rem)/1.05 'Playfair Display',serif;letter-spacing:.02em;text-align:center;animation:rise 2s both}
+.love{position:relative;z-index:2;color:#ff8a94;text-shadow:0 2px 10px #000a;font-size:2.2rem;margin-top:8px;text-align:center;animation:rise 3s .8s both}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}}
+
+@media(max-width:600px){
+  .title.big{font-size:2.5rem;margin-top:6vh}
+  .gift span{font-size:4.4rem}
+  .letter{font-size:1.2rem}
+  .card{margin-left:44px;padding:28px 18px;min-height:240px}
+  .serif,.hand{font-size:1.15rem}
+  .strip{width:56px;top:-8px}
+  .strip .ph{height:58px}
+  .deco{font-size:2.8rem}
+  .bouquet{font-size:4rem;bottom:-22px}
+  .vinyl{width:96px;height:96px;bottom:-24px;right:4px}
+  .video{padding:10px;margin-bottom:44px}
+  .stamp{width:76px;height:90px}
+  .s1{right:4px;top:-16px}
+  .s2{right:6px;bottom:-28px}
+  .fl{width:var(--w,96px);height:var(--h,96px)}
+  .happy{margin-top:24vh}
+  .love{font-size:1.8rem}
+  .title{font-size:2rem}
+}
